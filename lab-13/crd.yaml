@@ -1,0 +1,16 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: crontabs.mm364g.mylabserver.com
+         # This name must match names below.
+         # <plural>.<group> syntax
+spec:
+  scope: Cluster # also namespace
+  group: mm364g.mylabserver.com
+  version: v1
+  names:
+    kind: CronTab     #Typically Camelcase
+    plural: crontabs  #url
+    singular: crontab # show CLI
+    shortNames:
+    - ct              #CLI
